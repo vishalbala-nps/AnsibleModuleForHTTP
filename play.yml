@@ -1,0 +1,8 @@
+- hosts: localhost
+  tasks:
+    - name: Test that my module works
+      get_status_code:
+        url: http://www.google.com/
+      register: result
+
+    - debug: var=result
